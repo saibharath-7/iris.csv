@@ -1,0 +1,19 @@
+import pandas as pd
+
+# Load the Iris dataset
+iris_data = pd.read_csv('Iris.csv')
+
+# Extract the required columns
+sepal_data = iris_data[['SepalLengthCm', 'SepalWidthCm']]
+
+# Compute the covariance matrix
+covariance_matrix = sepal_data.cov()
+
+# Compute the correlation matrix
+correlation_matrix = sepal_data.corr()
+
+print("Covariance Matrix:")
+print(covariance_matrix)
+
+print("\nCorrelation Matrix:")
+print(correlation_matrix)
